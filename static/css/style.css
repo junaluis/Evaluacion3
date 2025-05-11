@@ -1,0 +1,87 @@
+/* === Estilo General === */
+body.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* === Estilo para Página de Inicio (index.html) === */
+.boton {
+  display: inline-block;
+  margin: 20px;
+  padding: 20px 40px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #0056b3;
+}
+
+/* === Estilo para Formularios (ejercicio1.html y ejercicio2.html) === */
+.formulario {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 320px;
+}
+
+.formulario h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.formulario label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Botón de envío */
+.btn,
+.formulario input[type="submit"],
+.boton-formulario {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.btn:hover,
+.formulario input[type="submit"]:hover,
+.boton-formulario:hover {
+  background-color: #0056b3;
+}
+
+/* Resultado (para ejercicio1) */
+.resultado {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body class="centered">
+ <div class="formulario">
+  <h2> Notas Aprobado - Reprobado</h2>
+  <form method="POST">
+    <label>Nota 1:</label>
+    <input type="number" name="nota1" min="10" max="70">
+    <label>Nota 2:</label>
+    <input type="number" name="nota2" min="10" max="70">
+    <label>Nota 3:</label>
+    <input type="number" name="nota3" min="10" max="70">
+    <label>Asistencia (%):</label>
+    <input type="number" name="asistencia" min="0" max="100">
+    <input type="submit" value="Enviar">
+  </form>
+
+  {% if resultado %}
+    <p>Promedio: <strong>{{ promedio }}</strong></p>
+    <p>Asistencia: <strong>{{ asistencia }}%</strong></p>
+    <p>Estado: <strong class="{{ 'aprobado' if resultado == 'Aprobado' else 'reprobado' }}">{{ resultado }}</strong></p>
+    {% if razones %}
+      <ul>
+        {% for razon in razones %}
+          <li>{{ razon }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endif %}
+  <a href="/">Volver al inicio</a>
+ </div>
+</body>
+</html>

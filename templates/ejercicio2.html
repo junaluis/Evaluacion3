@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="centered">
+  <div class="formulario">
+    <h2>Ejercicio 2:</h2>
+    <form method="POST">
+      <label>Nombre 1:</label>
+      <input type="text" name="nuno">
+      <label>Nombre 2:</label>
+      <input type="text" name="ndos">
+      <label>Nombre 3:</label>
+      <input type="text" name="ntres">
+      <input type="submit" value="Enviar" class="boton">
+    </form>
+    {% if resultado %}
+      <p class="resultado">{{ resultado|safe }}</p>
+    {% endif %}
+    <br>
+    <a href="/">Volver al inicio</a>
+  </div>
+</body>
+</html>
